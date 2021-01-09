@@ -17,10 +17,10 @@ public class scoreBasketball : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("object entered the ring" + other);
+        //Debug.Log("object entered the ring" + other);
         if (other.gameObject.tag == "basketball")
         {
-            Debug.Log("1231321 ==   " + other);
+            Debug.Log("basketball enter");
             value += 1;
             score.text = value.ToString();
         }

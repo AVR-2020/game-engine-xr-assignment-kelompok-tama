@@ -15,7 +15,7 @@ public class destroyBasketball : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
         if(transform.position.y < 0)
         {
             Debug.Log("destroyed");

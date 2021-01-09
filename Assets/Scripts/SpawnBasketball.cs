@@ -45,7 +45,7 @@ public class SpawnBasketball : MonoBehaviour
     void FixedUpdate()
     {
 
-        Debug.Log("kondisi isUsable : " + target.isUsable);
+        //Debug.Log("kondisi isUsable : " + target.isUsable);
 
         spawnBasketball();
         //Debug.Log("kondisi InteractableObject : " + target.isActiveAndEnabled);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class scoreBasketball : MonoBehaviour
 {
-    public GameObject trigger;
+    public GameObject trigger; 
     public TextMesh score;
     int value = 0;
 
@@ -15,13 +15,28 @@ public class scoreBasketball : MonoBehaviour
         Debug.Log("inisiasi score");
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("the ball has enter the ring");
-        value += 1;
-        score.text = value.ToString();
+        Debug.Log("object entered the ring" + other);
+        if (other.gameObject.tag == "basketball")
+        {
+            Debug.Log("1231321 ==   " + other);
+            value += 1;
+            score.text = value.ToString();
+        }
+        
         //speed = speed * -1;
         //colorPicker = Random.Range(0, 10);
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        Debug.Log("object stay the ring");
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        Debug.Log("object exit the ring");
     }
 
     // Update is called once per frame
